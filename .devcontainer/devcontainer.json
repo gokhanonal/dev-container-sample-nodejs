@@ -1,0 +1,12 @@
+{
+    "name": "Fedora Node.js Container",
+    // Pull latest available Fedora docker image
+    "image": "fedora:latest",
+    // Set container workspace directory
+    "workspaceFolder": "/workspace",
+    // Bind local workspace to container workspace
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    // Install git, github cli, nodejs
+    "postCreateCommand": ".devcontainer/postCommand.sh"
+    }
+    
